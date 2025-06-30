@@ -1,4 +1,4 @@
-# 🧮 Score MAMÁ - Calculadora en Python
+# 🖥️ Calculadora Score MAMÁ 🤰
 
 Este proyecto implementa una calculadora interactiva en Python del **Score MAMÁ (Modelo de Alerta Materna Andina)**, una herramienta clínica utilizada por el **Ministerio de Salud Pública del Ecuador** para la **detección temprana de riesgo materno** en pacientes embarazadas, especialmente a partir de las 20 semanas de gestación.
 
@@ -25,11 +25,7 @@ Clasificar la gravedad de las pacientes obstétricas de forma objetiva, permitie
 
 ## 🧠 Lógica clínica implementada
 
-El código se basa en los rangos definidos por el **MSP del Ecuador**, como se observa en la tabla oficial del Score MAMÁ. Por ejemplo:
-
-- Una frecuencia respiratoria ≥30 rpm o ≤10 rpm recibe **3 puntos**.
-- Un estado de consciencia "confusa" o "responde a la voz" otorga **2 puntos**.
-- Proteinuria positiva (++ o más) suma **2 puntos**, mientras que negativa puntúa **0**.
+El código se basa en los rangos definidos por el **MSP del Ecuador**, como se observa en la tabla oficial del Score MAMÁ. 
 
 ## 📝 Licencia
 
@@ -38,13 +34,11 @@ Este software está liberado bajo la **Licencia MIT en español**, permitiendo s
 ## 💻 Requisitos
 
 - Python 3.7 o superior
-- Ejecutable directamente desde la consola (`python score_mama.py`)
 
 ## 📦 Archivos incluidos
 
-- `score_mama.py`: Código fuente del programa
-- `README.md`: Explicación del proyecto
-- (Opcional) Versión compilada `.exe` para Windows
+- `score mama.py`: Código fuente del programa.
+- `README.md`: Explicación del proyecto.
 
 ## 🩺 Utilidad clínica
 
@@ -52,3 +46,8 @@ Una herramienta útil para:
 - Médicos en áreas de emergencia o gineco-obstetricia
 - Estudiantes de medicina
 - Personal de salud en zonas rurales
+
+## 📚 Referencias 
+
+- Ministerio de Salud Pública: Control Prenatal. Guía de Práctica Clínica. Primera Edición. Quito: Dirección Nacional de Normatización; 2015. Disponible en: 
+https://www.salud.gob.ec/wp-content/uploads/2014/05/GPC-CPN-final-mayo-2016-DNN.pdf
