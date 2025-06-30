@@ -1,0 +1,140 @@
+# Licencia MIT
+# Copyright (c) 2025 Jorge Menéndez S.
+# Por la presente se concede permiso, sin cargo, a cualquier persona que obtenga una copia de este software y los archivos de documentación asociados (el "Software"), para tratar el Software sin restricción, incluidos, entre otros, los derechos de usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y/o vender copias del Software, y para permitir a las personas a quienes se les proporcione el Software que lo hagan, sujeto a las siguientes condiciones:
+# El aviso de copyright anterior y este aviso de permiso se incluirán en todas las copias o partes sustanciales del Software.
+# EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITADA A LAS GARANTÍAS DE COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DEL COPYRIGHT SERÁN RESPONSABLES POR NINGUNA RECLAMACIÓN, DAÑO U OTRA RESPONSABILIDAD, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O DE OTRO MODO, DERIVADA DE, O EN CONEXIÓN CON EL SOFTWARE O EL USO U OTRO TIPO DE ACCIONES EN EL SOFTWARE.
+
+def puntuar_fc(fc):
+    if fc <= 59:
+        return 3
+    elif 60 <= fc <= 100:
+        return 0
+    elif 101 <= fc <= 110:
+        return 1
+    elif 111 <= fc <= 119:
+        return 2
+    else:
+        return 3
+
+def puntuar_ps(ps):
+    if ps <= 70:
+        return 3
+    elif 71 <= ps <= 89:
+        return 2
+    elif 90 <= ps <= 139:
+        return 0
+    elif 140 <= ps <= 159:
+        return 1
+    else:
+        return 3
+
+def puntuar_pd(pd):
+    if pd <= 50:
+        return 3
+    elif 51 <= pd <= 59:
+        return 2
+    elif 60 <= pd <= 85:
+        return 0
+    elif 86 <= pd <= 99:
+        return 1
+    else:
+        return 3
+
+def puntuar_fr(fr):
+    if fr <= 10:
+        return 3
+    elif 11 <= fr <= 12:
+        return 2
+    elif 13 <= fr <= 20:
+        return 0
+    elif 21 <= fr <= 29:
+        return 1
+    else:
+        return 3
+
+def puntuar_temp(temp):
+    if temp <= 36:
+        return 1
+    elif 36.1 <= temp <= 37.6:
+        return 0
+    elif 37.7 <= temp <= 38.4:
+        return 1
+    else:
+        return 2
+
+def puntuar_sato2(sat):
+    if sat <= 85:
+        return 3
+    elif 86 <= sat <= 89:
+        return 2
+    elif 90 <= sat <= 93:
+        return 1
+    else:
+        return 0
+
+def puntuar_estado_consciencia():
+    print("\nSeleccione el estado de consciencia:")
+    print("1. Alerta (1 punto)")
+    print("2. Confusa o agitada (2 puntos)")
+    print("3. Responde a la voz / somnolienta (2 puntos)")
+    print("4. Responde al dolor / estuporosa (3 puntos)")
+    print("5. No responde (3 puntos)")
+    opcion = input("Ingrese una opción (1-5): ")
+    if opcion == "1":
+        return 1
+    elif opcion in ["2", "3"]:
+        return 2
+    else:
+        return 3
+
+def puntuar_proteinuria():
+    print("\nSeleccione la proteinuria:")
+    print("1. Negativa (-) (0 puntos)")
+    print("2. Trazas (+/-) (1 punto)")
+    print("3. Positiva (+ o más) (2 puntos)")
+    opcion = input("Ingrese una opción (1-3): ")
+    if opcion == "1":
+        return 0
+    elif opcion == "2":
+        return 1
+    else:
+        return 2
+
+def score_mama():
+    print("=== CÁLCULO DEL SCORE MAMÁ ===")
+    total = 0
+
+    fc = float(input("Frecuencia cardíaca (lpm): "))
+    total += puntuar_fc(fc)
+
+    ps = float(input("Presión sistólica (mmHg): "))
+    total += puntuar_ps(ps)
+
+    pd = float(input("Presión diastólica (mmHg): "))
+    total += puntuar_pd(pd)
+
+    fr = float(input("Frecuencia respiratoria (rpm): "))
+    total += puntuar_fr(fr)
+
+    temp = float(input("Temperatura (°C): "))
+    total += puntuar_temp(temp)
+
+    sat = float(input("Saturación de O2 (%): "))
+    total += puntuar_sato2(sat)
+
+    total += puntuar_estado_consciencia()
+
+    total += puntuar_proteinuria()
+
+    print("\n--- RESULTADO ---")
+    print(f"Score MAMÁ total: {total}")
+
+    if total <= 1:
+        print("RIESGO: Bajo")
+    elif 2 <= total <= 4:
+        print("RIESGO: Intermedio")
+    else:
+        print("RIESGO: ALTO - ¡Alerta materna!")
+
+if __name__ == "__main__":
+    score_mama()
