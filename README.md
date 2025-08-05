@@ -17,6 +17,19 @@ Clasificar la gravedad de las pacientes obstétricas de forma objetiva, permitie
   7. Estado de consciencia
   8. Proteinuria en orina
 
+### **Tabla de Puntuación Score MAMÁ**
+
+| Puntaje 3 | Puntaje 2 | Puntaje 1 | **Parámetro (Puntaje 0 - Normal)** | Puntaje 1 | Puntaje 2 | Puntaje 3 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| ≤50 | | 51-59 | **FC (lpm): 60-100** | 101-110 | 111-119 | ≥120 |
+| ≤70 | 71-89 | | **Sistólica (mmHg): 90-139** | | 140-159 | ≥160 |
+| ≤50 | 51-59 | | **Diastólica (mmHg): 60-85** | 86-89 | 90-109 | ≥110 |
+| ≤11 | | | **FR (rpm): 12-22** | | 23-29 | ≥30 |
+| | ≤35.5 | | **Tº C: 35.6-37.5** | 37.6-38.4 | | ≥38.5 |
+| ≤85 | 86-89 | 90-93 | **Sat O₂ (%): 94-100** | | | |
+| No responde | Responde al dolor / Estuporosa | | **Estado de Conciencia: Alerta** | Responde a la voz / Somnolienta | Confusa / Agitada | |
+| | | | **Proteinuria: Negativo** | Positivo | | |
+
 - Asigna a cada variable un puntaje de **0 a 3**, según los valores de referencia oficiales del MSP.
 - Suma el puntaje total y clasifica el **riesgo materno**:
   - **0–1 puntos**: Riesgo **bajo**
