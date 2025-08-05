@@ -132,7 +132,7 @@ def score_mama():
 
     if total <= 1:
         print("RIESGO: Bajo")
-    elif 2 <= total <= 3:
+    elif 2 <= total <= 4:
         print("RIESGO: Intermedio")
     else:
         print("RIESGO: ALTO - ¡Alerta materna!")
